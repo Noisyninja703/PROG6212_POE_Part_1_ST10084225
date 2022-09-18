@@ -1,0 +1,47 @@
+﻿<Window x:Class="TimeManagementApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeManagementApp"
+        Title="Time Management App" Height="450" Width="900"
+        Background="#81998E"  
+        ResizeMode="NoResize"      
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        
+        <!--#region Grid definitions-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--#endregion-->
+        
+        <!--#region Header-->
+        <TextBlock Grid.Row="0" Text="Time Manager" VerticalAlignment="Top" HorizontalAlignment="Center" Height="64" Foreground="#F6FAF8" FontSize="26" Margin="0,10,0,0" Grid.RowSpan="2" />
+        <!--#endregion-->
+        
+        <!--#region Navigation Bar-->
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Button x:Name="btnSemester" Foreground="#4D5B55" Background="Transparent" BorderThickness="0" Content="Semester" FontSize="22" Height="110" Click="SemesterButton_Click"/>
+            <Button x:Name="btnModule" Foreground="#4D5B55" Background="Transparent"  BorderThickness="0" Content="Modules" FontSize="22" Height="110" Click="ModuleButton_Click"/>
+            <Button x:Name="btnSelStufy" Foreground="#4D5B55" Background="Transparent"  BorderThickness="0" Content="Self Study" FontSize="22" Height="110" Click="SelfStudyButton_Click"/>
+        </StackPanel>
+        <!--#endregion-->
+        
+        <!--#region Frame Setup-->
+        <Frame x:Name="MainFrame" Height="450" Width="760"  NavigationUIVisibility="Hidden" Background="#B4D6C8" Grid.Column="1" Grid.RowSpan="2"/>
+        <!--#endregion-->
+        
+        <!--#region Exit Button-->
+        <Button x:Name="btnClose" Content="Exit" Foreground="Azure" Background="Transparent" HorizontalAlignment="Center" Margin="0,355,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="80" FontSize="22" Click="btnClose_Click"/>
+
+    </Grid>
+</Window>

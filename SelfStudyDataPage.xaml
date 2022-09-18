@@ -1,0 +1,64 @@
+﻿<Page x:Class="TimeManagementApp.SelfStudyDataPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TimeManagementApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="760"
+      Title="WorkPage">
+
+    <!--#region Page resources-->
+    <Page.Resources>
+        <SolidColorBrush x:Key="txtColour" Color="#4D5B55"/>
+    </Page.Resources>
+    <!--#endregion-->
+
+    <!--#region Page Content-->
+    <Grid>
+
+        <!--#region Grid Definitions-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <!--#endregion-->
+
+        <!--#region Header-->
+        <TextBlock Text="Self Study" Foreground="{StaticResource txtColour}" Background="Transparent" FontSize="32" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <!--#endregion-->
+
+        <!--#region Pointers-->
+        <TextBlock Text="Select a Module:" Foreground="{StaticResource txtColour}" Background="Transparent" FontSize="18" HorizontalAlignment="Left" Width="180" Height="30" Margin="10,10,0,0" Grid.Row="1"  TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Text="Add Self Study Hours Here:" Foreground="{StaticResource txtColour}" Background="Transparent" FontSize="18" HorizontalAlignment="Left" Width="220" Height="30" Margin="10,135,0,0" Grid.Row="1"  TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <!--#endregion-->
+
+        <!--#region Module Selection-->
+        <ComboBox Name="cmbModules" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" Background="Transparent" Foreground="{StaticResource txtColour}" HorizontalAlignment="Left" Margin="158,56,0,0" Grid.Row="1" VerticalAlignment="Top" Width="187" Height="28" SelectionChanged="cmbModules_SelectionChanged" />
+        <TextBlock HorizontalAlignment="Left" Margin="28,53,0,0" Grid.Row="1" Text="Module Code:" Foreground="{StaticResource txtColour}"  TextWrapping="Wrap" Width="180" Height="28" FontSize="20" VerticalAlignment="Top"/>
+        <!--#endregion-->
+
+        <!--#region Self Study Input Fields-->
+        <StackPanel Grid.Row="1"  Height="30"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" Margin="45,180,0,0" >
+            <TextBox x:Name="txbHours" FontStyle="Italic" FontSize="18" BorderThickness="0" Width="300" Height="28" Background="Transparent " Text="Hours Worked" Foreground="{StaticResource txtColour}" GotFocus="txbHours_GotFocus" LostFocus="txbHours_LostFocus" TextChanged="txbHours_TextChanged"   />
+            <Canvas x:Name="canHours" Height="2" Width="300" Background="{StaticResource txtColour}"/>
+        </StackPanel>
+
+        <DatePicker  x:Name="datePickerSelfStudyDay" Text="Semester Start" BorderBrush="{StaticResource txtColour}" Height="25" HorizontalAlignment="Left" BorderThickness="0" Background="Transparent" Foreground="{StaticResource txtColour}" Margin="158,230,0,0"  VerticalAlignment="Top" Width="187" Grid.Row="1" />
+        <TextBlock HorizontalAlignment="Left" Foreground="{StaticResource txtColour}" Background="Transparent" Margin="45,230,0,0" Grid.Row="1" Text="Date of work:" TextWrapping="Wrap" Width="113" Height="30" FontSize="18" VerticalAlignment="Top"/>
+        <Button x:Name="btnAdd" Content="Add" Background="Transparent" Foreground="{StaticResource txtColour}" FontSize="18" HorizontalAlignment="Left" Margin="265,276,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Height="30" Click="btnAdd_Click"/>
+        <!--#endregion-->
+
+        <!--#region Data Displays-->
+        <TextBox x:Name="txbData" Background="Transparent" Foreground="{StaticResource txtColour}" BorderThickness="0" HorizontalAlignment="Left" Margin="397,10,0,0" Grid.Row="1" Text="Module Self Study Info" FontSize="15" TextWrapping="Wrap" VerticalAlignment="Top" Width="353" Height="190" />
+        <TextBox x:Name="txbSelfStudyHours" Background="Transparent" Foreground="{StaticResource txtColour}" BorderThickness="0" HorizontalAlignment="Left" Margin="397,238,0,0" Grid.Row="1" Text="Self Study Done" FontSize="18" TextWrapping="Wrap" VerticalAlignment="Top" Width="353" Height="125"/>
+        <TextBlock Foreground="{StaticResource txtColour}" HorizontalAlignment="Left" Margin="397,214,0,0" Grid.Row="1" Text="This Weeks Self Study Plan Info:" FontSize="18" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <!--#endregion-->
+
+        <!--#region Dev Help Button-->
+        <Button x:Name="btnDevNote" Content="Help" Background="Transparent" Foreground="{StaticResource txtColour}" FontSize="18" HorizontalAlignment="Left" Margin="158,276,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Height="30" Click="btnHelp_Click"  />
+        <!--#endregion-->
+
+    </Grid>
+    <!--#endregion-->
+</Page>
