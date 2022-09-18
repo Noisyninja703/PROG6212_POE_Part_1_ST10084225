@@ -1,0 +1,12 @@
+C:\Users\sivan\source\repos\TimeManagerLib\obj\Debug\net5.0\TimeManagerLib.csproj.AssemblyReference.cache
+C:\Users\sivan\source\repos\TimeManagerLib\obj\Debug\net5.0\TimeManagerLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sivan\source\repos\TimeManagerLib\obj\Debug\net5.0\TimeManagerLib.AssemblyInfoInputs.cache
+C:\Users\sivan\source\repos\TimeManagerLib\obj\Debug\net5.0\TimeManagerLib.AssemblyInfo.cs
+C:\Users\sivan\source\repos\TimeManagerLib\obj\Debug\net5.0\TimeManagerLib.csproj.CoreCompileInputs.cache
+C:\Users\sivan\source\repos\TimeManagerLib\bin\Debug\net5.0\TimeManagerLib.deps.json
+C:\Users\sivan\source\repos\TimeManagerLib\bin\Debug\net5.0\TimeManagerLib.dll
+C:\Users\sivan\source\repos\TimeManagerLib\bin\Debug\net5.0\TimeManagerLib.pdb
+C:\Users\sivan\source\repos\TimeManagerLib\obj\Debug\net5.0\TimeManagerLib.dll
+C:\Users\sivan\source\repos\TimeManagerLib\obj\Debug\net5.0\refint\TimeManagerLib.dll
+C:\Users\sivan\source\repos\TimeManagerLib\obj\Debug\net5.0\TimeManagerLib.pdb
+C:\Users\sivan\source\repos\TimeManagerLib\obj\Debug\net5.0\ref\TimeManagerLib.dll
